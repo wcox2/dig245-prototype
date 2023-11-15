@@ -66,11 +66,9 @@
             interactionsContainer.innerHTML = '<h2>User Info</h2>';
 
             // Display each interaction in the UI
-            userInteractions.forEach((interaction, index) => {
-                const interactionElement = document.createElement('div');
-                interactionElement.textContent = `Your most recommended category is ${topCategory}`;
-                interactionsContainer.appendChild(interactionElement);
-            });
+            const interactionElement = document.createElement('div');
+            interactionElement.textContent = `Your most recommended category is ${topCategory}`;
+            interactionsContainer.appendChild(interactionElement);
         }
 
         // Example JavaScript functions to handle button clicks
