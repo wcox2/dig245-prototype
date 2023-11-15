@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(21, 21, 21);
+        }
+
+        #app {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .post {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .post-content {
+            line-height: 1.6;
+        }
+
+        .post-image {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+        
+        .post-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .button:hover {
+            color: #3498db;
+        }
+
+        .icon {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body data-new-gr-c-s-check-loaded="14.1136.0" data-gr-ext-installed="">
+
+    <div id="show-interaction">
+        <button onclick="showInteractions()">
+            Show Interactions
+        </button>&gt;
+    </div>    
+    <div id="app">
+        <!-- Example Post 1 -->
+
+        <div class="post">
+            <div class="post-header">
+                <img src="./Social Media App_files/9131529.png" alt="User 1 Avatar" class="user-avatar">
+                <div class="user-info">
+                    <div class="user-name">User 1</div>
+                    <div class="post-time">2 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>This is the content of the first post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <img src="./Social Media App_files/cat.jpg" alt="Post 1" class="post-image">
+            <div class="post-buttons">
+                <div class="button" onclick="likePost(1)">
+                    <!-- <span class="icon">👍</span> -->
+                    <span class="like-count">0</span>
+                </div>
+                <div class="button" onclick="commentPost(1)">
+                    <!-- <span class="icon">💬</span> Comment -->
+                </div>
+                <div class="button" onclick="sharePost(1)">
+                    <!-- <span class="icon">🔄</span> Share -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ... (similar structure for posts 2-5) -->
+        <div class="post">
+            <div class="post-header">
+                <img src="./Social Media App_files/9131529.png" alt="User 2 Avatar" class="user-avatar">
+                <div class="user-info">
+                    <div class="user-name">User 2</div>
+                    <div class="post-time">2 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>This is the content of the second post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <img src="./Social Media App_files/11500_mauibeaches.jpg" alt="Post 2" class="post-image">
+            <div class="post-buttons">
+                <div class="button" onclick="likePost(2)">
+                    <!-- <span class="icon">👍</span> -->
+                    <span class="like-count">0</span>
+                </div>
+                <div class="button" onclick="commentPost(2)">
+                    <!-- <span class="icon">💬</span> Comment -->
+                </div>
+                <div class="button" onclick="sharePost(2)">
+                    <!-- <span class="icon">🔄</span> Share -->
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <img src="./Social Media App_files/9131529.png" alt="User 3 Avatar" class="user-avatar">
+                <div class="user-info">
+                    <div class="user-name">User 3</div>
+                    <div class="post-time">2 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>This is the content of the third post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <img src="./Social Media App_files/download.jpg" alt="Post 3" class="post-image">
+            <div class="post-buttons">
+                <div class="button" onclick="likePost(3)">
+                    <!-- <span class="icon">👍</span> -->
+                    <span class="like-count">0</span>
+                </div>
+                <div class="button" onclick="commentPost(3)">
+                    <!-- <span class="icon">💬</span> Comment -->
+                </div>
+                <div class="button" onclick="sharePost(3)">
+                    <!-- <span class="icon">🔄</span> Share -->
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <img src="./Social Media App_files/9131529.png" alt="User 4 Avatar" class="user-avatar">
+                <div class="user-info">
+                    <div class="user-name">User 4</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>This is the content of the fourth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <img src="./Social Media App_files/AhG5YttF-720.jpg" alt="Post 4" class="post-image">
+            <div class="post-buttons">
+                <div class="button" onclick="likePost(4)">
+                    <!-- <span class="icon">👍</span> -->
+                    <span class="like-count">0</span>
+                </div>
+                <div class="button" onclick="commentPost(4)">
+                    <!-- <span class="icon">💬</span> Comment -->
+                </div>
+                <div class="button" onclick="sharePost(4)">
+                    <!-- <span class="icon">🔄</span> Share -->
+                </div>
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post-header">
+                <img src="./Social Media App_files/9131529.png" alt="User 5 Avatar" class="user-avatar">
+                <div class="user-info">
+                    <div class="user-name">User 5</div>
+                    <div class="post-time">2 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p>This is the content of the fifth post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <img src="./Social Media App_files/brideandgroom1-035b8b063dc74e2eb7daca96bbb25321.jpg" alt="Post 5" class="post-image">
+            <div class="post-buttons">
+                <div class="button" onclick="likePost(5)">
+                    <span class="icon">👍</span>
+                    <span class="like-count">0</span>
+                </div>
+                <div class="button" onclick="commentPost(5)">
+                    <span class="icon">💬</span> Comment
+                </div>
+                <div class="button" onclick="sharePost(5)">
+                    <span class="icon">🔄</span> Share
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const userInteractions = [];
+
+        // Function to handle post interactions (like, comment, share)
+        function handleInteraction(postId, action) {
+            const interaction = {
+                postId,
+                action,
+                timestamp: new Date().toLocaleString()
+            };
+
+            // Log the interaction to the console (you can modify this to store interactions)
+            console.log("User performed ${action} on post ${postId} at ${interaction.timestamp}");
+
+            // Store the interaction in the userInteractions array
+            userInteractions.push(interaction);
+
+            // Update UI or perform other actions as needed
+            // updateInteractionUI();
+        }
+
+        // Function to update the UI with interaction details
+        function updateInteractionUI() {
+            const interactionsContainer = document.getElementById('interactions-container');
+            interactionsContainer.innerHTML = '<h2>User Interactions</h2>';
+            
+            // Display each interaction in the UI
+            userInteractions.forEach((interaction, index) => {
+                const interactionElement = document.createElement('div');
+                interactionElement.textContent = "${index + 1}. Post ${interaction.postId}: ${interaction.action} at ${interaction.timestamp}";
+                interactionsContainer.appendChild(interactionElement);
+            });
+        }
+
+        // Example JavaScript functions to handle button clicks
+        function likePost(postId) {
+            const likeCountElement = document.querySelector("#app .post:nth-child(${postId}) .like-count");
+            let likeCount = parseInt(likeCountElement.textContent) || 0;
+            likeCount++;
+            likeCountElement.textContent = likeCount;
+
+            // Log the like interaction
+            handleInteraction(postId, 'like');
+        }
+
+        function commentPost(postId) {
+            // Add your logic for handling comments
+            console.log("Commenting on post ${postId}");
+
+            // Log the comment interaction
+            handleInteraction(postId, 'comment');
+        }
+
+        function sharePost(postId) {
+            // Add your logic for handling shares
+            console.log("Sharing post ${postId}");
+
+            // Log the share interaction
+            handleInteraction(postId, 'share');
+        }
+
+        function showInteractions(){
+
+            for (let i = 0; i < userInteractions.length; i++){
+                console.log("si", userInteractions[i])
+            }
+
+        }
+    </script>
+    
+    <div id="interactions-container" class="interactions"></div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
